@@ -1,0 +1,137 @@
+body {
+  padding: 1rem;
+}
+
+section {
+}
+
+h1 {
+  display: none;
+  font-family: 'helvetica';
+}
+
+p {
+  font-family: 'helvetica';
+}
+
+img {
+  width: 15vw;
+  height: 45vw;
+}
+
+#text {
+  display: flex;
+  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+}
+
+#text .event {
+  padding: 1rem;
+  flex: 1;
+  animation: rotate 1s infinite alternate;
+}
+
+#circle {
+  display: flex;
+  flex: auto;
+  height: 600px;
+  overflow: none;
+}
+
+.float {
+  float:left;
+}
+
+.event {
+  background: white;
+}
+
+.small {
+  width: 150px;
+  height: 150px;
+  background: black;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  border-radius: 75px;
+}
+
+.middle {
+  width: 200px;
+  height: 200px;
+  background: black;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.large {
+  width: 300px;
+  height: 300px;
+  background: black;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px;
+}
+
+.reveal{
+	display: block;
+}
+
+.small:hover {
+  transition: all .5s ease-in;
+}
+
+.small:hover {
+  background: red;
+	transform: rotate(20deg) scale();
+}
+
+.large:hover {
+  transition: all .5s ease-in;
+}
+
+.large:hover {
+  width: 300px;
+  height: 300px;
+  background: blue;
+	transform: rotate(20deg) scale(3);
+
+}
+
+.middle:hover {
+  transition: all .5s ease-in;
+}
+
+.middle:hover {
+	background: yellow;
+	z-index: 10;
+  transform: scale(.7, 1.5) rotate(30deg) skewY(-15deg) translate(200px, 20%);
+
+}
+
+
+
+@media screen and (max-width: 700px){
+  body {
+    background: yellow;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+div:.large {
+  width: 300px;
+  height: 300px;
+  background: blue;
+  transform: rotate(20deg) scale(4);
+  }
+
+  @keyframes rotate{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
